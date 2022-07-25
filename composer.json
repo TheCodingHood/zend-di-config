@@ -1,0 +1,65 @@
+{
+  "name": "TheCodingHood/zend-phpdi-config",
+  "description": "Temp. Fork from elie29/zend-di-config",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "keywords": [
+    "expressive",
+    "zf",
+    "zendframework",
+    "laminas",
+    "mezzio",
+    "php-di",
+    "di",
+    "container",
+    "psr-11"
+  ],
+  "authors": [
+    {
+      "name": "Markus Foitzik",
+      "email": "markus@codinghood.de"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "laminas/laminas-stdlib": "^3.2",
+    "php-di/php-di": "^6.3"
+  },
+  "require-dev": {
+    "laminas/laminas-coding-standard": "^2.1.4",
+    "mikey179/vfsstream": "^1.6.7",
+    "mockery/mockery": "^1.0",
+    "phpspec/prophecy-phpunit": "^2.0",
+    "phpstan/phpstan": "^0.12.57",
+    "phpstan/phpstan-mockery": "^0.12.13",
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Elie\\PHPDI\\Config\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ElieTest\\PHPDI\\Config\\": "tests"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "bin": [
+    "bin/add-autowires-entry"
+  ],
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "phpstan": "phpstan analyse src tests --error-format=checkstyle > phpstan.xml || true",
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-clover clover.xml"
+  }
+}

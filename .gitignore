@@ -1,0 +1,9 @@
+/build/
+/vendor/
+/.settings/
+/.buildpath
+/phpstan.xml
+/clover.xml
+/.project
+/.idea
+.phpunit.result.cache
