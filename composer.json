@@ -3,7 +3,6 @@
   "description": "Temp. Fork from elie29/zend-di-config",
   "type": "library",
   "license": "MIT",
-  "minimum-stability": "stable",
   "keywords": [
     "expressive",
     "zf",
